@@ -2,11 +2,14 @@
 #Day 1: Calorie Counting
 
 def main():
-	maxCalories= 0
+	elves = []
 	for x in open("AoC1.txt").read().split("\n\n"):
-		maxCalories= max(maxCalories, (sum(list(map(int, x.split())))))
-			
-	print("Max calories: ", maxCalories)
+		thisElf = (sum(list(map(int, x.split()))))
+		elves.append(thisElf)
+
+	print("Fatty ELF number ", 	elves.index(max(elves))+1, 
+	", they've got ", max(elves), " calories!")
 	
 if __name__ == "__main__":
 	main()
+
