@@ -18,7 +18,7 @@ def fixCargo (cargo):
 			if not re.search('[a-zA-Z]', y):
 				x.remove(y)
 
-def CM9000(x):
+def cm9000(x):
 	print("WORKING", x.strip())
 	if len(x.strip()) > 1:
 		doMove = re.findall(r'\d+', x.strip())
@@ -27,7 +27,7 @@ def CM9000(x):
 			temp = crates[int(doMove[1]) - 1].pop()
 			crates[int(doMove[2]) - 1].append(temp)
 
-def CM9001(x):
+def cm9001(x):
 	print("WORKING", x.strip())
 	if len(x.strip()) > 1:
 		doMove = re.findall(r'\d+', x.strip())
@@ -65,10 +65,10 @@ for x in input():
 	else:
 		#move crates
 		#PART 1
-		CM9000(x)
+		cm9000(x)
 
 		#PART 2
-		#CM9001(x)
+		#cm9001(x)
 
 		pprint(crates)
 		print("\n")
